@@ -1,25 +1,23 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{hi}}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
+    <topbar></topbar>
+    <sidebar></sidebar>
+    <div class="nav-bar">
+    <ul class="nav-bar-list clearfix">
+        <li class="active"><a rel="external" href="/index.php?r=index/wap&amp;u=1&amp;pv=6" class="cnzzCounter ui-link" data-cnzz-type="51" data-cnzz="0">今日新品</a></li>
+        <li><a rel="external" href="/index.php?r=p/wap&amp;u=1&amp;pv=6" class="cnzzCounter ui-link" data-cnzz-type="52" data-cnzz="0">超级人气榜</a></li>
+        <li><a rel="external" href="/index.php?r=index/9&amp;u=1&amp;pv=6" class="cnzzCounter ui-link" data-cnzz-type="53" data-cnzz="0">9块9包邮</a></li>
     </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
-    <tip></tip>
+</div>
     <ul>
       <li>
         <router-link to="/first">第一页</router-link>
+      </li>
+      <li>
+        <router-link to="/goodsList">goodsList</router-link>
+      </li>
+      <li>
+        <router-link to="/goodsDetails">goodsDetails</router-link>
       </li>
       
       <li>
@@ -33,8 +31,14 @@
 <script>
 import tip from './component/tip.vue'
 import test from './component/test.vue'
+import sidebar from './component/sidebar.vue'
+import topbar from './component/topbar.vue'
 
-export default {
+import goodsList from './component/goodsList.vue'
+import goodsDetails from './component/goodsDetails.vue'
+
+export default
+ {
   name: 'app',
   data () {
     return {
@@ -42,7 +46,7 @@ export default {
       msg: 'Welcome to Your Vue.js App'
     }
   },
-  components: { tip, test }
+  components: { tip, test, sidebar ,topbar, goodsList, goodsDetails}
 }
 </script>
 
@@ -51,9 +55,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
 h1, h2 {
@@ -65,12 +67,37 @@ ul {
   padding: 0;
 }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
 a {
   color: #42b983;
+}
+
+.nav-bar .nav-bar-list {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: #fafafa;
+}
+.nav-bar .nav-bar-list li {
+  list-style: none;
+  float: left;
+  width: 33.333%;
+  text-align: center;
+}
+.nav-bar .nav-bar-list li a {
+  color: #6f6f6f;
+  font-size: 15px;
+  line-height: 2.2em;
+  display: block;
+  border-bottom: 1px solid #d8d8d8;
+}
+.nav-bar .nav-bar-list li a:focus,
+.nav-bar .nav-bar-list li a:hover {
+  color: #FF6600;
+}
+.nav-bar .nav-bar-list .active a {
+  color: #FF6600;
+  border-bottom: 1px solid #FF6600;
 }
 </style>
