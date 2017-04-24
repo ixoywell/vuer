@@ -1,62 +1,34 @@
 <template>
 <div class="goods-detail">
-      <div class="detail-wrapper">
-            <div class="img" style="max-width: 310px">
-                <img class="normal-img" src="http://img.alicdn.com/imgextra/i2/2935607264/TB22rGIfhBmpuFjSZFsXXcXpFXa_!!2935607264.jpg_430x430.jpg" alt="宝翼婴幼儿童彩色果蔬面" data-href="http://uland.taobao.com/coupon/edetail?activityId=d9cc8839600a40e3adf54b002280d273&amp;pid=mm_123456_23456_123456&amp;itemId=544541166621&amp;src=qtka_wxxt&amp;dx=1">
-                <span>疯抢中，手慢无！</span>
-            </div>
-            <div class="title-wrapper clearfix">
-                <span class="taobao"></span>
-                宝翼婴幼儿童彩色果蔬面    </div>
-                <div class="recommend-wrapper">
-                <div class="text">
-                    <span>小编推荐</span>1罐=250克，随机送一个试吃；宝翼婴幼儿童彩色果蔬面，让宝宝营养均衡，细腻易吸收，锻炼宝宝咀嚼能力，安全无添加剂，放心食用。           
-                </div>
+    <div class="detail-wrapper">
+        <div class="img" style="max-width: 310px">
+            <img class="normal-img" src="http://img.alicdn.com/imgextra/i2/2935607264/TB22rGIfhBmpuFjSZFsXXcXpFXa_!!2935607264.jpg_430x430.jpg" alt="宝翼婴幼儿童彩色果蔬面" data-href="http://uland.taobao.com/coupon/edetail?activityId=d9cc8839600a40e3adf54b002280d273&amp;pid=mm_123456_23456_123456&amp;itemId=544541166621&amp;src=qtka_wxxt&amp;dx=1">
+            <span>疯抢中，手慢无！</span>
+        </div>
+        <div class="title-wrapper clearfix">
+            <span class="taobao"></span>宝翼婴幼儿童彩色果蔬面    
+        </div>
+        <div class="recommend-wrapper">
+            <div class="text">
+                <span>小编推荐</span>1罐=250克，随机送一个试吃；宝翼婴幼儿童彩色果蔬面，让宝宝营养均衡，细腻易吸收，锻炼宝宝咀嚼能力，安全无添加剂，放心食用。           
             </div>
         </div>
-        <div class="buy-wrapper" style="padding-right: 0;">
-            <span class="price">券后价：<i>¥<b style="font-size:22px;">11.8</b></i></span>
+    </div>
+    <div class="buy-wrapper" style="padding-right: 0;">
+        <span class="price">券后价：<i>¥<b style="font-size:22px;">11.8</b></i></span>
         <span class="coupon">¥14.8</span>
-        <a style="background-color: #fc3616;
-color: #ffffff;
-float: right;
-width: 120px;
-text-align: center;
-font-size: 16px;" class="normal-btn ui-link" href="http://uland.taobao.com/coupon/edetail?activityId=d9cc8839600a40e3adf54b002280d273&amp;pid=mm_123456_23456_123456&amp;itemId=544541166621&amp;src=qtka_wxxt&amp;dx=1">领券购买&nbsp;&gt;</a>
-
+        <a style="background-color: #fc3616;color: #ffffff;float: right;width: 120px;text-align: center;font-size: 16px;" class="normal-btn ui-link" href="http://uland.taobao.com/coupon/edetail?activityId=d9cc8839600a40e3adf54b002280d273&amp;pid=mm_123456_23456_123456&amp;itemId=544541166621&amp;src=qtka_wxxt&amp;dx=1">领券购买&nbsp;&gt;</a>
         <a href="http://uland.taobao.com/coupon/edetail?activityId=d9cc8839600a40e3adf54b002280d273&amp;pid=mm_123456_23456_123456&amp;itemId=544541166621&amp;src=qtka_wxxt&amp;dx=1" class="normal-btn ui-link" style="float: right; background: #f69919; line-height: 20px; text-align: center; color: #ffffff; font-size: 12px; width: 64px; height: 50px; padding-top: 4px;">
-        优惠券<br><span style="font-size: 15px;color: #ffffff; ">3元</span></a>
-
-        </div>
+        优惠券<br><span style="font-size: 15px;color: #ffffff; ">3元</span>
+        </a>
     </div>
 
     <div class="pos-box clearfix">
     <p class="pos-title"><i></i>精品推荐</p>
-    <div class="ads-list">
-
-                        <div class="goods-item">
-            <a data-transition="slide" href="/index.php?r=p/d&amp;id=220712&amp;u=1&amp;pv=8" class="img QtkSelfClick cnzzCounter ui-link" data-cnzz-type="1" data-cnzz="220712">
-                            <span class="coupon-wrapper">
-                    <span class="coupon">独家券</span>
-                    <span class="price">3元</span>
-                </span>
-                <img src="http://img.alicdn.com/imgextra/i2/TB1tFyTQFXXXXcaaXXXXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" alt="虞琳娜清新持久女士香水20ml">
-            </a>
-            <a data-transition="slide" href="/index.php?r=p/d&amp;id=220712&amp;u=1&amp;pv=8" class="title QtkSelfClick cnzzCounter ui-link" data-cnzz-type="1" data-cnzz="220712">
-                <div class="text" style=" color:#777777;">虞琳娜清新持久女士香水20ml</div>
-            </a>
-            <div class="price-wrapper">
-                <span class="text">券后</span>
-                <span class="price">￥9.9</span>
-                <div class="sold-wrapper">
-                    <span class="sold-num" style="font-size: 10px;">1557</span>
-                    <span class="text" style="font-size: 10px;">人已买</span>
-                </div>
-            </div>
-        </div>
-                <div class="goods-item">
+    <div class="ads-list">    
+        <div class="goods-item">
             <a data-transition="slide" href="/index.php?r=p/d&amp;id=224310&amp;u=1&amp;pv=8" class="img QtkSelfClick cnzzCounter ui-link" data-cnzz-type="1" data-cnzz="224310">
-                            <span class="coupon-wrapper">
+                <span class="coupon-wrapper">
                     <span class="coupon">独家券</span>
                     <span class="price">5元</span>
                 </span>
@@ -74,13 +46,13 @@ font-size: 16px;" class="normal-btn ui-link" href="http://uland.taobao.com/coupo
                 </div>
             </div>
         </div>
-                <div class="goods-item">
+        <div class="goods-item">
             <a data-transition="slide" href="/index.php?r=p/d&amp;id=225737&amp;u=1&amp;pv=8" class="img QtkSelfClick cnzzCounter ui-link" data-cnzz-type="1" data-cnzz="225737">
-                            <span class="today-wrapper">
-                        <span>今日</span>
-                        <span>新品</span>
+                <span class="today-wrapper">
+                    <span>今日</span>
+                    <span>新品</span>
                 </span>
-                            <span class="coupon-wrapper">
+                <span class="coupon-wrapper">
                     <span class="coupon">独家券</span>
                     <span class="price">40元</span>
                 </span>
@@ -98,13 +70,13 @@ font-size: 16px;" class="normal-btn ui-link" href="http://uland.taobao.com/coupo
                 </div>
             </div>
         </div>
-                <div class="goods-item">
+        <div class="goods-item">
             <a data-transition="slide" href="/index.php?r=p/d&amp;id=225933&amp;u=1&amp;pv=8" class="img QtkSelfClick cnzzCounter ui-link" data-cnzz-type="1" data-cnzz="225933">
-                            <span class="today-wrapper">
-                        <span>今日</span>
-                        <span>新品</span>
+                <span class="today-wrapper">
+                    <span>今日</span>
+                    <span>新品</span>
                 </span>
-                            <span class="coupon-wrapper">
+                <span class="coupon-wrapper">
                     <span class="coupon">独家券</span>
                     <span class="price">5元</span>
                 </span>
@@ -121,8 +93,8 @@ font-size: 16px;" class="normal-btn ui-link" href="http://uland.taobao.com/coupo
                     <span class="text" style="font-size: 10px;">人已买</span>
                 </div>
             </div>
-        </div>
-                
+        </div>              
+    </div>
     </div>
 </div>
 </template>

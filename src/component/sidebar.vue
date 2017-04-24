@@ -1,5 +1,5 @@
 <template>
-  <nav id="new-left-menu" class="side-bar opened-menu" style="z-index: 100; left: 0px;">
+  <nav id="new-left-menu" class="side-bar opened-menu" style="z-index: 100; left: 0px; display:none;">
     <div class="mask" id="menu-mask"></div>
     <div class="menu-content">
         <!-- 菜单具体展示内容 -->

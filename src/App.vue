@@ -1,44 +1,11 @@
 <template>
   <div id="app">
-    <topbar></topbar>
-    <sidebar></sidebar>
-    <div class="nav-bar">
-    <ul class="nav-bar-list clearfix">
-        <li class="active"><a rel="external" href="/index.php?r=index/wap&amp;u=1&amp;pv=6" class="cnzzCounter ui-link" data-cnzz-type="51" data-cnzz="0">今日新品</a></li>
-        <li><a rel="external" href="/index.php?r=p/wap&amp;u=1&amp;pv=6" class="cnzzCounter ui-link" data-cnzz-type="52" data-cnzz="0">超级人气榜</a></li>
-        <li><a rel="external" href="/index.php?r=index/9&amp;u=1&amp;pv=6" class="cnzzCounter ui-link" data-cnzz-type="53" data-cnzz="0">9块9包邮</a></li>
-    </ul>
-</div>
-    <ul>
-      <li>
-        <router-link to="/first">第一页</router-link>
-      </li>
-      <li>
-        <router-link to="/goodsList">goodsList</router-link>
-      </li>
-      <li>
-        <router-link to="/goodsDetails">goodsDetails</router-link>
-      </li>
-      
-      <li>
-        <router-link to="/second">第二页</router-link>
-      </li>
-    </ul>
     <router-view class="view"></router-view>
   </div>
 </template>
 
 <script>
-import tip from './component/tip.vue'
-import test from './component/test.vue'
-import sidebar from './component/sidebar.vue'
-import topbar from './component/topbar.vue'
-
-import goodsList from './component/goodsList.vue'
-import goodsDetails from './component/goodsDetails.vue'
-
-export default
- {
+export default {
   name: 'app',
   data () {
     return {
@@ -46,7 +13,9 @@ export default
       msg: 'Welcome to Your Vue.js App'
     }
   },
-  components: { tip, test, sidebar ,topbar, goodsList, goodsDetails}
+  created:function(){
+       this.$router.push('index'); // 页面加载时跳转
+  }
 }
 </script>
 

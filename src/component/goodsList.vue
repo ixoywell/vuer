@@ -93,6 +93,8 @@ export default {
   padding: 0.2em;
   padding-top: 0.4em;
   /* text-align: center; */
+  background: #eee;
+  overflow: hidden
 }
 .goods-list .goods-item {
   width: 48%;
@@ -100,6 +102,7 @@ export default {
   text-align: left;
   margin-bottom: 0.7em;
   margin-right: 0.15em;
+  background: #fff;
 }
 .goods-list .goods-item:nth-child(2n) {
   float:right;
