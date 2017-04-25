@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 
 import index from './views/index.vue'
+import productDetail from './views/productDetail.vue'
 import goodsList from './component/goodsList.vue'
 import goodsDetails from './component/goodsDetails.vue'
 import test from './component/test.vue'
@@ -15,6 +16,10 @@ export default new VueRouter({
     routes: [{
             path: '/',
             component: index
+        },
+        {
+            path: '/productDetail',
+            component: productDetail
         },
         {
             path: '/goodsList',

@@ -3,12 +3,10 @@
     <topbar></topbar>
     <div class="nav-bar">
       <ul class="nav-bar-list clearfix">
-          <li class="active"><a rel="external" href="/index.php?r=index/wap&amp;u=1&amp;pv=6" class="cnzzCounter ui-link" data-cnzz-type="51" data-cnzz="0">今日新品</a></li>
-          <li><a rel="external" href="/index.php?r=p/wap&amp;u=1&amp;pv=6" class="cnzzCounter ui-link" data-cnzz-type="52" data-cnzz="0">超级人气榜</a></li>
-          <li><a rel="external" href="/index.php?r=index/9&amp;u=1&amp;pv=6" class="cnzzCounter ui-link" data-cnzz-type="53" data-cnzz="0">9块9包邮</a></li>
+          <li v-for="(tab, $index) in tabList" v-bind:class="{active: tab.id == id}" @click="getList(tab.id)">{{tab.name}}</li>
       </ul>
     </div>
-    <goodsList></goodsList>
+    <goodsListCom :goodsLi="goods"></goodsListCom>
     <ul>
       <li>
         <router-link to="/first">第一页</router-link>
@@ -30,20 +28,33 @@
 
 <script>
 import topbar from '../component/topbar.vue'
-import goodsList from '../component/goodsList.vue'
+import goodsListCom from '../component/goodsList.vue'
 import footerBox from '../component/footer.vue'
 
 
-export default
- {
+export default {
   name: 'app',
   data () {
     return {
+      tabList: [{id: 0, name:'今日新品'},{id: 1, name:'超级人气榜'},{id: 2, name:'9块9包邮'}],
+      goods: [],
+      id: 0,
       hi: 'hello vue',
       msg: 'Welcome to Your Vue.js App'
     }
   },
-  components: { topbar, goodsList, footerBox }
+  methods:{
+    getList(id){
+     this.id = id;
+    var self = this;
+      this.$http.get("http://localhost:3001/list").then( (data) =>{
+        console.log(data);
+        //this.$store.commit('getGoodsList', data.list);
+        self.goods=data.list;
+      });
+    }
+  },
+  components: { topbar, goodsListCom, footerBox }
 }
 </script>
 
@@ -81,19 +92,17 @@ a {
   float: left;
   width: 33.333%;
   text-align: center;
-}
-.nav-bar .nav-bar-list li a {
   color: #6f6f6f;
   font-size: 15px;
   line-height: 2.2em;
   display: block;
   border-bottom: 1px solid #d8d8d8;
 }
-.nav-bar .nav-bar-list li a:focus,
-.nav-bar .nav-bar-list li a:hover {
+.nav-bar .nav-bar-list li:focus,
+.nav-bar .nav-bar-list li:hover {
   color: #FF6600;
 }
-.nav-bar .nav-bar-list .active a {
+.nav-bar .nav-bar-list .active {
   color: #FF6600;
   border-bottom: 1px solid #FF6600;
 }

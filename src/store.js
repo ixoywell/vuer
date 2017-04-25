@@ -8,9 +8,13 @@ const store = new VueX.Store({
         author: 'hello ixoy',
         msg: 'hello ixoy',
         title: "vuer商城",
-        count: 0
+        count: 0,
+        // goodsList: []
     },
     mutations: {
+        // getGoodsList(state, list){
+        //     state.goodsList = list
+        // },
         newAuthor(state, msg){
             state.author = msg
         },
