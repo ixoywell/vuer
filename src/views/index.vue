@@ -6,7 +6,7 @@
           <li v-for="(tab, $index) in tabList" v-bind:class="{active: tab.id == id}" @click="getList(tab.id)">{{tab.name}}</li>
       </ul>
     </div>
-    <goodsListCom :goodsLi="goods"></goodsListCom>
+    <goodsListCom v-bind:goods-list="goods"></goodsListCom>
     <ul>
       <li>
         <router-link to="/first">第一页</router-link>
@@ -30,6 +30,7 @@
 import topbar from '../component/topbar.vue'
 import goodsListCom from '../component/goodsList.vue'
 import footerBox from '../component/footer.vue'
+import data from '../assets/list.js'
 
 
 export default {
@@ -43,15 +44,22 @@ export default {
       msg: 'Welcome to Your Vue.js App'
     }
   },
+  mounted() {
+    this.getList(this.id)
+  },
   methods:{
     getList(id){
      this.id = id;
-    var self = this;
-      this.$http.get("http://localhost:3001/list").then( (data) =>{
-        console.log(data);
-        //this.$store.commit('getGoodsList', data.list);
-        self.goods=data.list;
-      });
+     var self = this;
+      this.$http.get("http://localhost:3001/list").then((response) => {
+          
+          this.goods = data.list;
+          console.log(this.goods);
+          //console.log(response.list);
+				})
+				.catch(function(response) {
+					console.log(response)
+				})
     }
   },
   components: { topbar, goodsListCom, footerBox }

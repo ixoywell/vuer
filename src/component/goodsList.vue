@@ -1,7 +1,7 @@
 <template>
   <div class="goods-list">
-    <div class="goods-item" v-for="goods in goodsLi">
-      <router-link to="/productDetail/:id" class="img">
+    <div class="goods-item" v-for="goods in goodsList">
+      <router-link v-bind:to="goods.id | detailsUrl" class="img">
         <span class="today-wrapper" v-if="goods.new == 1">
           <span>今日<br/>新品</span>
         </span>
@@ -60,7 +60,7 @@
         <img src="http://img.alicdn.com/imgextra/i1/2890257402/TB2MpttpdRopuFjSZFtXXcanpXa_!!2890257402.jpg_230x230.jpg" alt="">
       </a>
       <a data-transition="slide" data-qtk-url="/index.php?r=p/d&amp;id=225936&amp;u=1&amp;pv=6" class="title QtkSelfClick cnzzCounter ui-link" data-cnzz-type="1" data-cnzz="225936">
-        <div class="text">欧孕大牌18条礼盒装婴儿可洗尿布</div>
+        <div class="title">欧孕大牌18条礼盒装婴儿可洗尿布</div>
       </a>
       <div class="price-wrapper">
         <span class="text">券后</span>
@@ -81,10 +81,17 @@ export default {
     return {
       author: "jinkey-love",
       articles: [],
-      //goodsLi: [],
+      // goodsList: [],
     }
   },
-  props: ['goodsLi'],
+  filters: {
+      detailsUrl(id){
+        return '/productDetails/'+ id;
+      }
+  },
+  props: ['goodsList'],
+
+  watch: {},
   // computed: {
   //   goodsList () {
   //     return this.$store.state.goodsList;
@@ -170,11 +177,7 @@ export default {
   border: none;
 }
 
-.goods-list .goods-item a.title {
-  width: 100%;
-}
-
-.goods-list .goods-item a.title .text {
+.goods-list .goods-item .title {
   word-break: break-all;
   width: 100%;
   overflow: hidden;

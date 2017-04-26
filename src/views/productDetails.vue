@@ -1,25 +1,30 @@
 <template>
 <div class="goods-detail">
+     <topbar></topbar>
+     <div class="loading" v-if="loading">
+      Loading...
+    </div>
     <div class="detail-wrapper">
         <div class="img" style="max-width: 310px">
-            <img class="normal-img" src="http://img.alicdn.com/imgextra/i2/2935607264/TB22rGIfhBmpuFjSZFsXXcXpFXa_!!2935607264.jpg_430x430.jpg" alt="宝翼婴幼儿童彩色果蔬面" data-href="http://uland.taobao.com/coupon/edetail?activityId=d9cc8839600a40e3adf54b002280d273&amp;pid=mm_123456_23456_123456&amp;itemId=544541166621&amp;src=qtka_wxxt&amp;dx=1">
+            <img class="normal-img" v-bind:src="details.imgUrl" v-bind:alt="details.title" v-bind:data-href="details.imgUrl">
             <span>疯抢中，手慢无！</span>
         </div>
         <div class="title-wrapper clearfix">
-            <span class="taobao"></span>宝翼婴幼儿童彩色果蔬面    
+            <span class="taobao"></span>{{details.title}}
         </div>
         <div class="recommend-wrapper">
             <div class="text">
-                <span>小编推荐</span>1罐=250克，随机送一个试吃；宝翼婴幼儿童彩色果蔬面，让宝宝营养均衡，细腻易吸收，锻炼宝宝咀嚼能力，安全无添加剂，放心食用。           
+                {{ $route.params.id }}
+                <span>小编推荐</span>{{details.intro}}        
             </div>
         </div>
     </div>
     <div class="buy-wrapper" style="padding-right: 0;">
-        <span class="price">券后价：<i>¥<b style="font-size:22px;">11.8</b></i></span>
-        <span class="coupon">¥14.8</span>
+        <span class="price">券后价：<i>¥<b style="font-size:22px;">{{details.price}}</b></i></span>
+        <span class="coupon">¥{{details.totalPrice}}</span>
         <a style="background-color: #fc3616;color: #ffffff;float: right;width: 120px;text-align: center;font-size: 16px;" class="normal-btn ui-link" href="http://uland.taobao.com/coupon/edetail?activityId=d9cc8839600a40e3adf54b002280d273&amp;pid=mm_123456_23456_123456&amp;itemId=544541166621&amp;src=qtka_wxxt&amp;dx=1">领券购买&nbsp;&gt;</a>
-        <a href="http://uland.taobao.com/coupon/edetail?activityId=d9cc8839600a40e3adf54b002280d273&amp;pid=mm_123456_23456_123456&amp;itemId=544541166621&amp;src=qtka_wxxt&amp;dx=1" class="normal-btn ui-link" style="float: right; background: #f69919; line-height: 20px; text-align: center; color: #ffffff; font-size: 12px; width: 64px; height: 50px; padding-top: 4px;">
-        优惠券<br><span style="font-size: 15px;color: #ffffff; ">3元</span>
+        <a v-bind:href="details.productUrl" class="normal-btn ui-link" style="float: right; background: #f69919; line-height: 20px; text-align: center; color: #ffffff; font-size: 12px; width: 64px; height: 50px; padding-top: 4px;">
+        优惠券<br><span style="font-size: 15px;color: #ffffff; ">{{details.discount}}元</span>
         </a>
     </div>
 
@@ -100,13 +105,44 @@
 </template>
 
 <script>
+import topbar from '../component/topbar.vue'
+import data from '../assets/list.js'
+
 export default {
   data() {
     return {
+        loading: false,
       author: "jinkey-love",
       articles: [],
+      id: null,
+      details: {}
     }
-  }
+  },
+  created(){
+    this.getDetails();
+  },
+  watch: {
+    // 如果路由有变化，会再次执行该方法
+    '$route': 'getDetails'
+  },
+  methods:{
+        
+      getDetails: function(){
+          this.loading = true;
+        this.id = this.$route.params.id;
+
+        this.$http.get("http://localhost:3001/list").then((response) => {
+          console.log(response)
+          this.loading = false;
+          this.details = data.details;
+          console.log(this.details);
+          //console.log(response.list);
+		}).catch(function(response) {
+			console.log(response)
+		})
+      }
+  },
+  components: { topbar }
 }
 </script>
 
