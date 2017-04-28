@@ -17,7 +17,6 @@
       <li>
         <router-link to="/goodsDetails">goodsDetails</router-link>
       </li>
-      
       <li>
         <router-link to="/second">第二页</router-link>
       </li>
@@ -67,26 +66,6 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-a {
-  color: #42b983;
-}
-
 .nav-bar .nav-bar-list {
   list-style: none;
   width: 100%;
@@ -108,10 +87,10 @@ a {
 }
 .nav-bar .nav-bar-list li:focus,
 .nav-bar .nav-bar-list li:hover {
-  color: #FF6600;
+  color: #363946;
 }
 .nav-bar .nav-bar-list .active {
-  color: #FF6600;
-  border-bottom: 1px solid #FF6600;
+  color: #363946;
+  border-bottom: 1px solid #363946;
 }
 </style>

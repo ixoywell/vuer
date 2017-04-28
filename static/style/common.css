@@ -1,0 +1,15 @@
+/*顶部*/
+.top-bar .main-title {
+  background-color: #363946;
+  height: 50px;
+}
+.top-bar .main-title .main-icon {
+  position: absolute;
+  z-index: 100;
+  background: url("/static/images/wap-menu.png") no-repeat;
+  width: 40px;
+  height: 40px;
+  left: 0.6em;
+  top: 0.45em;
+  background-size:100%;
+}

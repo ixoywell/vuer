@@ -111,7 +111,7 @@ import data from '../assets/list.js'
 export default {
   data() {
     return {
-        loading: false,
+      loading: false,
       author: "jinkey-love",
       articles: [],
       id: null,

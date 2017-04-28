@@ -2,8 +2,12 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 
+//view
 import index from './views/index.vue'
+import productList from './views/productList.vue'
 import productDetails from './views/productDetails.vue'
+
+//component
 import goodsList from './component/goodsList.vue'
 import goodsDetails from './component/goodsDetails.vue'
 import test from './component/test.vue'
@@ -16,6 +20,10 @@ export default new VueRouter({
     routes: [{
             path: '/',
             component: index
+        },
+        {
+            path: '/productList', //搜索、分类列表
+            component: productList
         },
         {
             path: '/productDetails/:id',
