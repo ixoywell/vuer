@@ -1,155 +1,103 @@
 <template>
-<div class="goods-detail">
-     <topbar></topbar>
-     <div class="loading" v-if="loading">
-      Loading...
-    </div>
-    <div class="detail-wrapper">
-        <div class="img" style="max-width: 310px">
-            <img class="normal-img" v-bind:src="details.imgUrl" v-bind:alt="details.title" v-bind:data-href="details.imgUrl">
-            <span>疯抢中，手慢无！</span>
+    <div class="goods-detail">
+        <topbar></topbar>
+        <div class="loading" v-if="loading">
+            Loading...
         </div>
-        <div class="title-wrapper clearfix">
-            <span class="taobao"></span>{{details.title}}
-        </div>
-        <div class="recommend-wrapper">
-            <div class="text">
-                {{ $route.params.id }}
-                <span>小编推荐</span>{{details.intro}}        
+        <div class="detail-wrapper">
+            <div class="img">
+                <img class="normal-img" v-bind:src="details.imgUrl" v-bind:alt="details.title" v-bind:data-href="details.imgUrl">
+                <span>疯抢中，手慢无！</span>
             </div>
-        </div>
-    </div>
-    <div class="buy-wrapper" style="padding-right: 0;">
-        <span class="price">券后价：<i>¥<b style="font-size:22px;">{{details.price}}</b></i></span>
-        <span class="coupon">¥{{details.totalPrice}}</span>
-        <a style="background-color: #fc3616;color: #ffffff;float: right;width: 120px;text-align: center;font-size: 16px;" class="normal-btn ui-link" href="http://uland.taobao.com/coupon/edetail?activityId=d9cc8839600a40e3adf54b002280d273&amp;pid=mm_123456_23456_123456&amp;itemId=544541166621&amp;src=qtka_wxxt&amp;dx=1">领券购买&nbsp;&gt;</a>
-        <a v-bind:href="details.productUrl" class="normal-btn ui-link" style="float: right; background: #f69919; line-height: 20px; text-align: center; color: #ffffff; font-size: 12px; width: 64px; height: 50px; padding-top: 4px;">
-        优惠券<br><span style="font-size: 15px;color: #ffffff; ">{{details.discount}}元</span>
-        </a>
-    </div>
-
-    <div class="pos-box clearfix">
-    <p class="pos-title"><i></i>精品推荐</p>
-    <div class="ads-list">    
-        <div class="goods-item">
-            <a data-transition="slide" href="/index.php?r=p/d&amp;id=224310&amp;u=1&amp;pv=8" class="img QtkSelfClick cnzzCounter ui-link" data-cnzz-type="1" data-cnzz="224310">
-                <span class="coupon-wrapper">
-                    <span class="coupon">独家券</span>
-                    <span class="price">5元</span>
-                </span>
-                <img src="http://img.alicdn.com/imgextra/i4/TB1i2CLPFXXXXbcXVXXXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" alt="【麦隆】速溶经典纯黑咖啡原味40条装">
-            </a>
-            <a data-transition="slide" href="/index.php?r=p/d&amp;id=224310&amp;u=1&amp;pv=8" class="title QtkSelfClick cnzzCounter ui-link" data-cnzz-type="1" data-cnzz="224310">
-                <div class="text" style=" color:#777777;">【麦隆】速溶经典纯黑咖啡原味40条装</div>
-            </a>
-            <div class="price-wrapper">
-                <span class="text">券后</span>
-                <span class="price">￥14.8</span>
-                <div class="sold-wrapper">
-                    <span class="sold-num" style="font-size: 10px;">8868</span>
-                    <span class="text" style="font-size: 10px;">人已买</span>
+            <div class="title-wrapper clearfix">
+                <span class="taobao"></span>{{details.title}}
+            </div>
+            <div class="recommend-wrapper">
+                <div class="text">
+                    {{ $route.params.id }}
+                    <span>小编推荐</span>{{details.intro}}
                 </div>
             </div>
         </div>
-        <div class="goods-item">
-            <a data-transition="slide" href="/index.php?r=p/d&amp;id=225737&amp;u=1&amp;pv=8" class="img QtkSelfClick cnzzCounter ui-link" data-cnzz-type="1" data-cnzz="225737">
-                <span class="today-wrapper">
-                    <span>今日</span>
-                    <span>新品</span>
-                </span>
-                <span class="coupon-wrapper">
-                    <span class="coupon">独家券</span>
-                    <span class="price">40元</span>
-                </span>
-                <img src="http://img.alicdn.com/imgextra/i1/2285451198/TB2KkV4aHFkpuFjy1XcXXclapXa_!!2285451198.jpg_290x290.jpg" alt="日本KISS ME梦幻泪眼眼线笔">
+        <div class="buy-wrapper" style="padding-right: 0;">
+            <span class="price">券后价：<i>¥<b style="font-size:22px;">{{details.price}}</b></i></span>
+            <span class="coupon">¥{{details.totalPrice}}</span>
+            <a style="background-color: #fc3616;color: #ffffff;float: right;width: 120px;text-align: center;font-size: 16px;" class="normal-btn ui-link" href="http://uland.taobao.com/coupon/edetail?activityId=d9cc8839600a40e3adf54b002280d273&amp;pid=mm_123456_23456_123456&amp;itemId=544541166621&amp;src=qtka_wxxt&amp;dx=1">领券购买&nbsp;&gt;</a>
+            <a v-bind:href="details.productUrl" class="normal-btn ui-link" style="float: right; background: #f69919; line-height: 20px; text-align: center; color: #ffffff; font-size: 12px; width: 64px; height: 50px; padding-top: 4px;">
+            优惠券<br><span style="font-size: 15px;color: #ffffff; ">{{details.discount}}元</span>
             </a>
-            <a data-transition="slide" href="/index.php?r=p/d&amp;id=225737&amp;u=1&amp;pv=8" class="title QtkSelfClick cnzzCounter ui-link" data-cnzz-type="1" data-cnzz="225737">
-                <div class="text" style=" color:#777777;">日本KISS ME梦幻泪眼眼线笔</div>
-            </a>
-            <div class="price-wrapper">
-                <span class="text">券后</span>
-                <span class="price">￥29</span>
-                <div class="sold-wrapper">
-                    <span class="sold-num" style="font-size: 10px;">1262</span>
-                    <span class="text" style="font-size: 10px;">人已买</span>
-                </div>
+        </div>
+    
+        <div class="pos-box clearfix">
+            <p class="pos-title"><i></i>精品推荐</p>
+            <div class="ads-list">
+                <goodsListCom v-bind:goods-list="goods" />
             </div>
         </div>
-        <div class="goods-item">
-            <a data-transition="slide" href="/index.php?r=p/d&amp;id=225933&amp;u=1&amp;pv=8" class="img QtkSelfClick cnzzCounter ui-link" data-cnzz-type="1" data-cnzz="225933">
-                <span class="today-wrapper">
-                    <span>今日</span>
-                    <span>新品</span>
-                </span>
-                <span class="coupon-wrapper">
-                    <span class="coupon">独家券</span>
-                    <span class="price">5元</span>
-                </span>
-                <img src="http://img.alicdn.com/imgextra/i1/752152336/TB2UTbHmrJkpuFjy1zcXXa5FFXa_!!752152336.jpg_290x290.jpg" alt="卡通可爱儿童凉鞋小孩包头拖鞋">
-            </a>
-            <a data-transition="slide" href="/index.php?r=p/d&amp;id=225933&amp;u=1&amp;pv=8" class="title QtkSelfClick cnzzCounter ui-link" data-cnzz-type="1" data-cnzz="225933">
-                <div class="text" style=" color:#777777;">卡通可爱儿童凉鞋小孩包头拖鞋</div>
-            </a>
-            <div class="price-wrapper">
-                <span class="text">券后</span>
-                <span class="price">￥9.9</span>
-                <div class="sold-wrapper">
-                    <span class="sold-num" style="font-size: 10px;">1993</span>
-                    <span class="text" style="font-size: 10px;">人已买</span>
-                </div>
-            </div>
-        </div>              
     </div>
-    </div>
-</div>
 </template>
 
 <script>
+import goodsListCom from '../component/goodsList.vue'
 import topbar from '../component/topbar.vue'
 import data from '../assets/list.js'
 
 export default {
-  data() {
-    return {
-      loading: false,
-      author: "jinkey-love",
-      articles: [],
-      id: null,
-      details: {}
-    }
-  },
-  created(){
-    this.getDetails();
-  },
-  watch: {
-    // 如果路由有变化，会再次执行该方法
-    '$route': 'getDetails'
-  },
-  methods:{
-        
-      getDetails: function(){
-          this.loading = true;
-        this.id = this.$route.params.id;
+    data() {
+        return {
+            loading: false,
+            author: "jinkey-love",
+            articles: [],
+            id: null,
+            goods: [],
+            details: {}
+        }
+    },
+    created() {
+        this.getDetails();
+    },
+    watch: {
+        // 如果路由有变化，会再次执行该方法
+        '$route': 'getDetails'
+    },
+    mounted() {
+        this.getAdList();
+    },
+    methods: {
+        //推广产品列表
+        getAdList(id) {
+            this.$http.get("http://localhost:3001/list").then((response) => {
 
-        this.$http.get("http://localhost:3001/list").then((response) => {
-          console.log(response)
-          this.loading = false;
-          this.details = data.details;
-          console.log(this.details);
-          //console.log(response.list);
-		}).catch(function(response) {
-			console.log(response)
-		})
-      }
-  },
-  components: { topbar }
+                this.goods = data.list;
+                console.log(this.goods);
+                //console.log(response.list);
+            })
+                .catch(function (response) {
+                    console.log(response)
+                })
+        },
+        //产品详情
+        getDetails: function () {
+            this.loading = true;
+            this.id = this.$route.params.id;
+
+            this.$http.get("http://localhost:3001/list").then((response) => {
+                console.log(response)
+                this.loading = false;
+                this.details = data.details;
+                console.log(this.details);
+                //console.log(response.list);
+            }).catch(function (response) {
+                console.log(response)
+            })
+        }
+    },
+    components: { topbar, goodsListCom }
 }
 </script>
 
 <style>
- .detail-wrapper {
-    padding: 0 15px 15px 15px;
-    margin-top: 10px;
+.detail-wrapper {
     background-color: #FFF;
 }
 
@@ -164,7 +112,7 @@ export default {
 }
 
 .detail-wrapper .title-wrapper .tmall {
-    background: url("/images/tmall.png") 0 0 no-repeat;
+    background: url("/static/images/tmall.png") 0 0 no-repeat;
     width: 16px;
     height: 16px;
     display: block;
@@ -174,7 +122,7 @@ export default {
 }
 
 .detail-wrapper .title-wrapper .taobao {
-    background: url("/images/taobao.png") 0 0 no-repeat;
+    background: url("/static/images/taobao.png") 0 0 no-repeat;
     width: 16px;
     height: 16px;
     display: block;
@@ -193,6 +141,7 @@ export default {
     border: 0;
     max-width: 100%;
     height: auto;
+    margin: 0 auto;
 }
 
 .detail-wrapper .img span {
@@ -374,7 +323,7 @@ export default {
     line-height: 15px;
     text-align: center;
     color: #FFF;
-    background-image: url("/images/coupon-btn.png");
+    background-image: url("/static/images/coupon-btn.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-origin: padding-box;
@@ -428,25 +377,28 @@ export default {
     }
 }
 
-.pos-box{
-  padding:10px 15px 60px 15px;
+.pos-box {
+    padding: 10px 15px 60px 15px;
 }
-.pos-box .pos-title{
-  height:24px;
-  line-height:24px;
-  color:#565656;
+
+.pos-box .pos-title {
+    height: 24px;
+    line-height: 24px;
+    color: #565656;
 }
-.pos-box .pos-title i{
-  float:left;
-  width:22px;
-  height:20px;
-  margin-top:1px;
-  margin-right:10px;
-  background:url("/images/show-pos.png") no-repeat center center;
-  background-size:100%;
+
+.pos-box .pos-title i {
+    float: left;
+    width: 22px;
+    height: 20px;
+    margin-top: 1px;
+    margin-right: 10px;
+    background: url("/static/images/show-pos.png") no-repeat center center;
+    background-size: 100%;
 }
-.pos-box .goods-list{
-  padding:0;
-  background-color:transparent;
+
+.pos-box .goods-list {
+    padding: 0;
+    background-color: transparent;
 }
 </style>

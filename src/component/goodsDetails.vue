@@ -112,8 +112,6 @@ export default {
 
 <style>
  .detail-wrapper {
-    padding: 0 15px 15px 15px;
-    margin-top: 10px;
     background-color: #FFF;
 }
 
@@ -128,7 +126,7 @@ export default {
 }
 
 .detail-wrapper .title-wrapper .tmall {
-    background: url("/images/tmall.png") 0 0 no-repeat;
+    background: url("/static/images/tmall.png") 0 0 no-repeat;
     width: 16px;
     height: 16px;
     display: block;
@@ -138,7 +136,7 @@ export default {
 }
 
 .detail-wrapper .title-wrapper .taobao {
-    background: url("/images/taobao.png") 0 0 no-repeat;
+    background: url("/static/images/taobao.png") 0 0 no-repeat;
     width: 16px;
     height: 16px;
     display: block;
@@ -338,7 +336,7 @@ export default {
     line-height: 15px;
     text-align: center;
     color: #FFF;
-    background-image: url("/images/coupon-btn.png");
+    background-image: url("/static/images/coupon-btn.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-origin: padding-box;
@@ -406,7 +404,7 @@ export default {
   height:20px;
   margin-top:1px;
   margin-right:10px;
-  background:url("/images/show-pos.png") no-repeat center center;
+  background:url("/static/images/show-pos.png") no-repeat center center;
   background-size:100%;
 }
 .pos-box .goods-list{

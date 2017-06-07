@@ -29,6 +29,10 @@ module.exports = {
           loader: "style!css"
       },
       {
+            test: /\.less$/,
+            loader: 'style-loader!css-loader!less-loader'
+      },
+      {
         test: /\\.(eot|woff|woff2|ttf)([\\?]?.*)$/,
         loader: "file"
       },

@@ -47,19 +47,19 @@ export default {
     this.getList(this.id)
   },
   methods:{
-    getList(id){
-     this.id = id;
-     var self = this;
-      this.$http.get("http://localhost:3001/list").then((response) => {
-          
-          this.goods = data.list;
-          console.log(this.goods);
-          //console.log(response.list);
-				})
-				.catch(function(response) {
-					console.log(response)
-				})
-    }
+      getList(id){
+      this.id = id;
+      var self = this;
+        this.$http.get("http://localhost:3001/list").then((response) => {
+            
+            this.goods = data.list;
+            console.log(this.goods);
+            //console.log(response.list);
+          })
+          .catch(function(response) {
+            console.log(response)
+          })
+      }
   },
   components: { topbar, goodsListCom, footerBox }
 }

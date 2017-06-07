@@ -2,10 +2,10 @@
 .top-bar .main-title {
   background-color: #363946;
   height: 50px;
+  overflow: hidden;
+  color: #fff;
 }
 .top-bar .main-title .main-icon {
-  position: absolute;
-  z-index: 100;
   background: url("/static/images/wap-menu.png") no-repeat;
   width: 40px;
   height: 40px;
