@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-Vue.use(VueRouter);
+// Vue.use(VueRouter);
 
 import index from './views/index.vue'
 import productDetails from './views/productDetails.vue'

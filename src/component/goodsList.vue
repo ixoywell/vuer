@@ -1,7 +1,7 @@
 <template>
   <div class="goods-list">
     <div class="goods-item" v-for="goods in goodsList">
-      <router-link v-bind:to="goods.id | detailsUrl" class="img">
+      <router-link v-bind:to="goods.id | detailsUrl" class="img" v-bind:data-id="goods.id">
         <span class="today-wrapper" v-if="goods.new == 1">
           <span>今日<br/>新品</span>
         </span>
@@ -23,8 +23,8 @@
       </div>
     </div>
   
-    <div class="goods-item">
-      <a data-transition="slide" data-qtk-url="/index.php?r=p/d&amp;id=226031&amp;u=1&amp;pv=6" class="img QtkSelfClick cnzzCounter ui-link" data-cnzz-type="1" data-cnzz="226031">
+    <div class="goods-item" data-msg="示例：静态数据">
+      <a data-transition="slide" href="/productDetails/343" class="img" data-cnzz-type="1" data-cnzz="226031">
         <span class="today-wrapper">
           <span>今日</span>
           <span>新品</span>
@@ -43,30 +43,6 @@
         <span class="price">￥36.5</span>
         <div class="sold-wrapper">
           <span style="font-size: 10px;" class="sold-num">158</span>
-          <span style="font-size: 10px;" class="text">人已买</span>
-        </div>
-      </div>
-    </div>
-    <div class="goods-item">
-      <a data-transition="slide" data-qtk-url="/index.php?r=p/d&amp;id=225936&amp;u=1&amp;pv=6" class="img QtkSelfClick cnzzCounter ui-link" data-cnzz-type="1" data-cnzz="225936">
-        <span class="today-wrapper">
-                            <span>今日</span>
-        <span>新品</span>
-        </span>
-        <span class="coupon-wrapper">
-                        <span class="coupon" style="color: #EDFF00;">独家券</span>
-        <span class="price">15元</span>
-        </span>
-        <img src="http://img.alicdn.com/imgextra/i1/2890257402/TB2MpttpdRopuFjSZFtXXcanpXa_!!2890257402.jpg_230x230.jpg" alt="">
-      </a>
-      <a data-transition="slide" data-qtk-url="/index.php?r=p/d&amp;id=225936&amp;u=1&amp;pv=6" class="title QtkSelfClick cnzzCounter ui-link" data-cnzz-type="1" data-cnzz="225936">
-        <div class="title">欧孕大牌18条礼盒装婴儿可洗尿布</div>
-      </a>
-      <div class="price-wrapper">
-        <span class="text">券后</span>
-        <span class="price">￥54</span>
-        <div class="sold-wrapper">
-          <span style="font-size: 10px;" class="sold-num">2192</span>
           <span style="font-size: 10px;" class="text">人已买</span>
         </div>
       </div>

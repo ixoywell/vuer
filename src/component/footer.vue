@@ -1,8 +1,5 @@
 <template>
   <footer class="footer">
-    <ul>
-      <li v-for="lis in ul">{{lis.li}}</li>
-    </ul>
     <p>
       Copyright&nbsp;&copy;&nbsp;{{author}} - 2016 All rights reserved
     </p>
@@ -30,3 +27,8 @@
     }
   }
 </script>
+<style>
+footer p{
+  text-align:center;
+}
+</style>

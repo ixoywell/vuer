@@ -105,7 +105,17 @@ export default {
     return {
       author: "jinkey-love",
       articles: [],
+      id: $route.params.id
     }
+  },
+  mounted(){
+    this.tip();
+  },
+  methods:{
+      tip: function(){
+          console.log($route.params.id);
+          console.log(this.id);
+      }
   }
 }
 </script>

@@ -5,7 +5,7 @@ Vue.use(VueX)
 
 const store = new VueX.Store({
     state: {
-        author: 'hello ixoy',
+        author: '丘',
         msg: 'hello ixoy',
         title: "vuer商城",
         count: 0,

@@ -7,21 +7,6 @@
       </ul>
     </div>
     <goodsListCom v-bind:goods-list="goods"></goodsListCom>
-    <ul>
-      <li>
-        <router-link to="/first">第一页</router-link>
-      </li>
-      <li>
-        <router-link to="/goodsList">goodsList</router-link>
-      </li>
-      <li>
-        <router-link to="/goodsDetails">goodsDetails</router-link>
-      </li>
-      
-      <li>
-        <router-link to="/second">第二页</router-link>
-      </li>
-    </ul>
     <footerBox></footerBox>
   </div>
 </template>
