@@ -53,11 +53,11 @@
   export default {
     data() {
       return {
-        sidebar: false,
-        author: "jinkey-love",
+        sidebar: false,  
+        author: "qiu",  //作者
         articles: [],
-        search: "",
-        title: "sdfsd",
+        search: "",   //搜索
+        title: "桃花居",  //网站名
         showSideBar: false, //显示目录栏
         startX: 0, //触摸位置
         moveX: 0, //滑动时的位置
